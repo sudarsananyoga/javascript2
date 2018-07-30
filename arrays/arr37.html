@@ -1,0 +1,19 @@
+
+<!DOCTYPE html><!DOCTYPE  
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript function to create a specified number of elements and pre-filled string value array</title>
+</head>
+<body>
+<script>
+function array_filled(n, val)
+{
+    return Array.apply(null, Array(n)).map(String.prototype.valueOf,val);
+}
+
+document.write(array_filled(3, 'default value'));
+document.write(array_filled(4, 'password'));
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formats a number to a human-readable string </title>
+</head>
+<body>
+<script>
+humanize_format = function humanize(num) {
+   if(typeof(num) == "undefined") return;
+  if(num % 100 >= 11 && num % 100 <= 13)
+        return num + "th";
+        
+        switch(num % 10) {
+            case 1: return num + "st";
+            case 2: return num + "nd";
+            case 3: return num + "rd";
+        }
+        return num + "th";
+    }
+document.write(humanize_format());  
+document.write(humanize_format(1));  
+document.write(humanize_format(8));  
+document.write(humanize_format(301));  
+document.write(humanize_format(402)); 
+</script>
+</body>
+</html>

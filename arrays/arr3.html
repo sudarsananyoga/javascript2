@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get the first element of an array</title>
+</head>
+<body>
+<script>
+var first =  function(array, n) {
+      if (array == null) 
+      return void 0;
+    if (n == null) 
+      return array[0];
+    if (n < 0)
+      return [];
+    return array.slice(0, n);
+  };
+
+document.write(first([7, 9, 0, -2]));
+document.write(first([],3));
+document.write(first([7, 9, 0, -2],3));
+document.write(first([7, 9, 0, -2],6));
+document.write(first([7, 9, 0, -2],-3));
+</script>
+</body>
+</html>
